@@ -3,7 +3,7 @@
 #  - sudo apt-get update -qq
 
 sudo: required
-dist: xenial
+dist: trusty
 
 branches:
   only: 
