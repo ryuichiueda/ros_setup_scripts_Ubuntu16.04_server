@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/ryuichiueda/ros_setup_scripts_Ubuntu16.04_server.svg?branch=master)](https://travis-ci.org/ryuichiueda/ros_setup_scripts_Ubuntu16.04_server)
-(Travis CI cannot handle Ubuntu 16.04 in this stage.)
+(Travis CI cannot handle Ubuntu 16.04 in this stage. So this is a fake.)
 
 # ros_setup_scripts_Ubuntu16.04
 
