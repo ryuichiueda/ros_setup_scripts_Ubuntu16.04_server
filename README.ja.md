@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/ryuichiueda/ros_setup_scripts_Ubuntu16.04_server.svg?branch=master)](https://travis-ci.org/ryuichiueda/ros_setup_scripts_Ubuntu16.04_server)
+（Travis CIでUbuntu 16.04がまだ動かないのでエラーが出ます。）
+
 # ros_setup_scripts_Ubuntu16.04
 
 ROS（Kinetic Kame）をUbuntu 16.04に一発でインストール・セットアップするシェルスクリプトです。

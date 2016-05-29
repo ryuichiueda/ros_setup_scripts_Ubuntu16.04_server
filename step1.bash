@@ -2,6 +2,7 @@
 
 UBUNTU_VER=$(lsb_release -sc)
 ROS_VER=kinetic
+[ $UBUNTU_VER == "precise" ] && ROS_VER=indigo
 
 if grep -F 'http://jp.' /etc/apt/sources.list ; then
 	echo "############WARNING##############"
