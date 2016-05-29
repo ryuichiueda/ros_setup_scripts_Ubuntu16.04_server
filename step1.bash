@@ -30,7 +30,8 @@ rosdep update
 
 sudo apt-get install -y python-rosinstall
 sudo apt-get install -y build-essential
-sudo apt-get install -y python-roslaunch
+
+[ "$ROS_VER" = "kinetic" ] && sudo apt-get install -y python-roslaunch
 #sudo apt-get install -y linux-headers-$(uname -r)
 
 grep -F "source /opt/ros/$ROS_VER/setup.bash" ~/.bashrc ||
