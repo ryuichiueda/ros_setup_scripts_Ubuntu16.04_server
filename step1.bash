@@ -25,7 +25,8 @@ sudo apt-get update || echo ""
 
 sudo apt-get install -y ros-${ROS_VER}-ros-base
 
-sudo rosdep init
+ls /etc/ros/rosdep/sources.list.d/20-default.list && sudo rm /etc/ros/rosdep/sources.list.d/20-default.list
+sudo rosdep init 
 rosdep update
 
 sudo apt-get install -y python-rosinstall
@@ -36,6 +37,12 @@ sudo apt-get install -y build-essential
 
 grep -F "source /opt/ros/$ROS_VER/setup.bash" ~/.bashrc ||
 echo "source /opt/ros/$ROS_VER/setup.bash" >> ~/.bashrc
+
+grep -F "ROS_MASTER_URI" ~/.bashrc ||
+export ROS_MASTER_URI=http://localhost:11311
+
+grep -F "ROS_HOSTNAME" ~/.bashrc ||
+export ROS_HOSTNAME=localhost
 
 
 ### instruction for user ###
