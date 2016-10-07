@@ -39,10 +39,10 @@ grep -F "source /opt/ros/$ROS_VER/setup.bash" ~/.bashrc ||
 echo "source /opt/ros/$ROS_VER/setup.bash" >> ~/.bashrc
 
 grep -F "ROS_MASTER_URI" ~/.bashrc ||
-export ROS_MASTER_URI=http://localhost:11311
+echo "export ROS_MASTER_URI=http://localhost:11311" >> ~/.bashrc
 
 grep -F "ROS_HOSTNAME" ~/.bashrc ||
-export ROS_HOSTNAME=localhost
+echo "export ROS_HOSTNAME=localhost" >> ~/.bashrc
 
 
 ### instruction for user ###
