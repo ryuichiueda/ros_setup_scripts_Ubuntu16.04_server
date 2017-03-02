@@ -7,7 +7,13 @@ ROS_VER=kinetic
 echo "deb http://packages.ros.org/ros/ubuntu $UBUNTU_VER main" > /tmp/$$-deb
 sudo mv /tmp/$$-deb /etc/apt/sources.list.d/ros-latest.list
 
-sudo apt-get install -y curl
+set +vx
+while sleep 1 ; do
+	sudo apt-get install -y curl ||
+	echo '***WAITING TO GET A LOCK FOR APT...***'
+done
+set -vx
+
 curl -k https://raw.githubusercontent.com/ros/rosdistro/master/ros.key | sudo apt-key add -
 sudo apt-get update || echo ""
 
