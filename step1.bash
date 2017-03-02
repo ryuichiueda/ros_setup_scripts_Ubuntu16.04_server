@@ -8,9 +8,9 @@ echo "deb http://packages.ros.org/ros/ubuntu $UBUNTU_VER main" > /tmp/$$-deb
 sudo mv /tmp/$$-deb /etc/apt/sources.list.d/ros-latest.list
 
 set +vx
-while sleep 1 ; do
-	sudo apt-get install -y curl ||
+while sudo apt-get install -y curl ; do
 	echo '***WAITING TO GET A LOCK FOR APT...***'
+	sleep 1
 done
 set -vx
 
